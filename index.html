@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<style>
+			div#theDiv {
+				color: #fff;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+					"Helvetica Neue", Arial, sans-serif;
+				font-size: 1000%;
+				text-align: center;
+			}
+		</style>
+		<title>Color.</title>
+	</head>
+	<body style="background-color: #123456;">
+		<div id="theDiv">
+			<span id="theColor" contenteditable="true">#123456</span>.
+		</div>
+		<script>
+			document.getElementById('theColor').addEventListener('input', _ => {
+				document.getElementsByTagName('body')[0].style.backgroundColor =
+					document.getElementById('theColor').innerText;
+			});
+		</script>
+	</body>
+</html>
